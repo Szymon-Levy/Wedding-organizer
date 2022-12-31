@@ -555,6 +555,155 @@ footer{
     color: var(--decorative-color);
 }
 
+
+
+/*======================TABS====================*/
+
+.page-title{
+    position: relative;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-title .white-bar {
+    position: absolute;
+    width: 88%;
+    height: 100px;
+    background-color: #fff;
+    left: 0;
+    bottom: 0;
+}
+
+.page-main-text {
+    position: relative;
+    padding-bottom: 110px;
+}
+
+.page-main-text .container {
+    padding-right: 10%;
+    position: relative;
+    z-index: 10;
+}
+
+.page-main-text .section-title {
+    font-size: 46px;
+    margin-top: -30px;
+    position: relative;
+}
+
+.page-main-text p:not(:last-child){
+    margin-bottom: 25px;
+}
+
+/*-------------About---------------*/
+
+.page-title.about{
+    background-image: url("images/about/page-title.jpg");
+}
+
+.page-main-text .about-tab-sign {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 200px;
+    opacity: .5;
+}
+
+.side-image-about {
+    display: grid;
+}
+
+.side-image-about .bg-text{
+    min-height: 320px;
+    background-image: url(images/about/side-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.side-image-about .bg-text::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.side-image-about .bg-text h3{
+    color: var(--white-color);
+    font-size: 40px;
+    line-height: 1.3;
+    position: relative;
+    z-index: 10;
+}
+
+.side-image-about .content {
+    padding: 70px var(--side-padding);
+    position: relative;
+}
+
+.side-image-about .content .section-title {
+    font-size: 30px;
+}
+
+.side-image-about .content p:not(:last-child){
+    margin-bottom: 25px;
+}
+
+.our-team{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding-top: 90px;
+}
+
+.our-team .section-title{
+    color: var(--white-color);
+    margin-bottom: 30px;
+}
+
+.our-team .container.members .row {
+    border-bottom: 1px solid rgb(46, 46, 46);
+    padding-bottom: 60px;
+    display: grid;
+    row-gap: 45px;
+}
+
+.our-team .team-member .position {
+    color: var(--decorative-color);
+    font-size: 15px;
+}
+
+.our-team .team-member .name {
+    color: var(--white-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.our-team .team-member .description {
+    line-height: 1.6;
+    opacity: .75;
+}
+
+.team-member-socials {
+    opacity: .75;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.team-member-socials span{
+    padding: 0 10px;
+}
+
+
 /*-------------Devices---------------*/
 
 
@@ -614,6 +763,32 @@ footer{
     }
     .testimonials::before{
         left: 5%;
+    }
+    .page-main-text .section-title {
+        font-size: 100px;
+        margin-top: -40px;
+    }
+    .page-title .white-bar {
+        width: 80%;
+        height: 110px;
+    }
+    .page-main-text .container {
+        padding-right: 25%;
+    }
+    .page-main-text .about-tab-sign {
+        top: 55px;
+    }
+    .side-image-about .bg-text{
+        min-height: 550px;
+    }
+    .side-image-about .bg-text h3{
+        font-size: 62px;
+    }
+    .side-image-about .content .section-title {
+        font-size: 35px;
+    }
+    .our-team .team-member .name {
+        font-size: 35px;
     }
 }
 
@@ -685,7 +860,56 @@ footer{
     .logos-carousel .swiper {
         margin-top: 70px;
     }
+    .page-title{
+        min-height: 600px;
+    }
+    .page-main-text .section-title {
+        font-size: 125px;
+        margin-bottom: 10px;
+    }
+    .page-title .white-bar {
+        width: 75%;
+    }
+    .page-main-text .container {
+        padding-right: 22%;
+    }
+    .page-main-text .about-tab-sign {
+        right: 10%;
+    }
+    .side-image-about .bg-text h3{
+        font-size: 80px;
+    }
+    .side-image-about .content .section-title {
+        font-size: 55px;
+    }
+    .side-image-about .content {
+        padding: 70px 10%;
+    }
+    .our-team .container.members .row {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 70px;
+        padding-bottom: 90px;
+    }
 }
+
+
+@media(min-width: 1025px){
+    .side-image-about{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .side-image-about .content {
+        padding: 200px 15% 110px;
+    }
+    .side-image-about .bg-text {
+        min-height: unset;
+        padding: 0 0 0 8%;
+    }
+    .page-main-text .about-tab-sign {
+        right: 10%;
+        width: 400px;
+    }
+}
+
 
 
 
@@ -765,5 +989,23 @@ footer{
     .logos-carousel {
         padding-bottom: 100px;
     }
+    .side-image-about .bg-text {
+        padding: 0 0 0 15%;
+    }
+    .our-team .team-member .name {
+        font-size: 50px;
+    }
+    .our-team .section-title {
+        margin-bottom: 90px;
+    }
+    .our-team .container.members .row {
+        padding-bottom: 110px;
+    }
 }
 
+
+@media(min-width: 1400px){
+    .side-image-about .bg-text h3{
+        font-size: 100px;
+    }
+}
