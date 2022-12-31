@@ -135,6 +135,7 @@ button span {
 
 main {
     padding-top: 130px;
+    overflow: hidden;
 }
 
 
@@ -597,7 +598,7 @@ footer{
     margin-bottom: 25px;
 }
 
-/*-------------About---------------*/
+/*-------------About page---------------*/
 
 .page-title.about{
     background-image: url("images/about/page-title.jpg");
@@ -701,6 +702,25 @@ footer{
 
 .team-member-socials span{
     padding: 0 10px;
+}
+
+
+
+/*-------------Gallery---------------*/
+
+.page-title.gallery{
+    background-image: url("images/gallery/page-title.jpg");
+}
+
+.photos-gallery .gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.photos-gallery .gallery-wrapper a {
+    display: flex;
 }
 
 
@@ -889,6 +909,9 @@ footer{
         grid-template-columns: repeat(3, 1fr);
         column-gap: 70px;
         padding-bottom: 90px;
+    }
+    .photos-gallery .gallery-wrapper {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
