@@ -579,7 +579,7 @@ footer{
 
 .page-main-text {
     position: relative;
-    padding-bottom: 110px;
+    padding-bottom: 90px;
 }
 
 .page-main-text .container {
@@ -724,6 +724,45 @@ footer{
 }
 
 
+/*-------------Testimonials---------------*/
+
+.page-title.testimonials-tab{
+    background-image: url("images/testimonials/page-title.jpg");
+}
+
+.testi-grid {
+    padding-bottom: 90px;
+}
+
+.testi-grid .container {
+    display: grid;
+    row-gap: 50px;
+}
+
+.testi-grid .testi-item .message {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.testi-grid .testi-item .info {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+
+.testi-grid .testi-item .avatar img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testi-grid .testi-item .sign {
+    font-size: 12px;
+}
+
+
 /*-------------Devices---------------*/
 
 
@@ -809,6 +848,23 @@ footer{
     }
     .our-team .team-member .name {
         font-size: 35px;
+    }
+
+    .testi-grid .container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 60px;
+        column-gap: 70px;
+    }
+    .testi-grid .testi-item .info {
+        column-gap: 18px;
+        margin-top: 30px;
+    }
+    .testi-grid .testi-item .avatar img{
+        width: 100px;
+        height: 100px;
+    }
+    .testi-grid .testi-item .sign {
+        font-size: 13.5px;
     }
 }
 
@@ -912,6 +968,12 @@ footer{
     }
     .photos-gallery .gallery-wrapper {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .page-main-text {
+        padding-bottom: 110px;
+    }
+    .testi-grid .container {
+        padding-right: 15%;
     }
 }
 
@@ -1030,5 +1092,8 @@ footer{
 @media(min-width: 1400px){
     .side-image-about .bg-text h3{
         font-size: 100px;
+    }
+    .testi-grid .container {
+        padding-right: 10%;
     }
 }
